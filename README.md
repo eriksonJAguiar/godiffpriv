@@ -4,7 +4,9 @@
 
 ### How it works?
 
-
+#### Data Type:
+- Numeric data should be float64 array
+- Symbolic data should be string array
 
 ### How to use?
 
