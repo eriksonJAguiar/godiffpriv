@@ -21,7 +21,7 @@ import "github.com/eriksonJAguiar/godiffpriv"
 
 #### Hello world:
 
-**For Numeric data:**
+- **For Numeric data:**
 
 ```	
 	package main
@@ -49,7 +49,7 @@ import "github.com/eriksonJAguiar/godiffpriv"
 	}
 ```
 
-**For Symbolic data:**
+- **For Symbolic data:**
 
 ```
   	package main
