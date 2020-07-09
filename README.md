@@ -19,7 +19,7 @@ go get https://github.com/eriksonJAguiar/godiffpriv
 
 ```	
 	data := []string{"Male", "Female", "Male", "Female"}
-	val := PrivateDataFactory(data)
+	val := godiffpriv.PrivateDataFactory(data)
 	res, _ := val.applyPrivacy(1)
 
 	var response map[string]float64
@@ -37,7 +37,7 @@ go get https://github.com/eriksonJAguiar/godiffpriv
 
 ```
   	data := []float64{1.5, 2.3, 7.2, 9.1}
-	val := PrivateDataFactory(data)
+	val := godiffpriv.PrivateDataFactory(data)
 	res, _ := val.applyPrivacy(1)
 
 	var response map[string]float64
