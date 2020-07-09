@@ -18,36 +18,56 @@ go get github.com/eriksonJAguiar/godiffpriv
 **For Numeric data:**
 
 ```	
-	data := []string{"Male", "Female", "Male", "Female"}
-	val := godiffpriv.PrivateDataFactory(data)
-	res, _ := val.applyPrivacy(1)
+	package main
 
-	var response map[string]float64
+	import (
+		"encoding/json"
+		"fmt"
+		"github.com/eriksonJAguiar/godiffpriv"
+	)
+	
+	func main() {
+		data := []string{"Male", "Female", "Male", "Female"}
+		val := godiffpriv.PrivateDataFactory(data)
+		res, _ := val.applyPrivacy(1)
 
-	err := json.Unmarshal(res, &response)
+		var response map[string]float64
 
-	if err != nil {
-		fmt.Println(err.Error())
-	} else {
-		fmt.Println(response)
+		err := json.Unmarshal(res, &response)
+
+		if err != nil {
+			fmt.Println(err.Error())
+		} else {
+			fmt.Println(response)
+		}
 	}
 ```
 
 **For Symbolic data:**
 
 ```
-  	data := []float64{1.5, 2.3, 7.2, 9.1}
-	val := godiffpriv.PrivateDataFactory(data)
-	res, _ := val.applyPrivacy(1)
+  	package main
 
-	var response map[string]float64
+	import (
+		"encoding/json"
+		"fmt"
+		"github.com/eriksonJAguiar/godiffpriv"
+	)
+	
+	func main() {
+		data := []float64{1.5, 2.3, 7.2, 9.1}
+		val := godiffpriv.PrivateDataFactory(data)
+		res, _ := val.applyPrivacy(1)
 
-	err := json.Unmarshal(res, &response)
+		var response map[string]float64
 
-	if err != nil {
-		fmt.Println(err.Error())
-	} else {
-		fmt.Println(response)
+		err := json.Unmarshal(res, &response)
+
+		if err != nil {
+			fmt.Println(err.Error())
+		} else {
+			fmt.Println(response)
+		}
 	}
 ```
 
