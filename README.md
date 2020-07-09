@@ -10,7 +10,7 @@
 
 #### Install:
 `
-go get https://github.com/eriksonJAguiar/godiffpriv
+go get github.com/eriksonJAguiar/godiffpriv
 `
 
 #### Hello world:
