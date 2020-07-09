@@ -17,9 +17,7 @@ go get https://github.com/eriksonJAguiar/godiffpriv
 
 **For Numeric data:**
 
-
-``
-
+```	
 	data := []string{"Male", "Female", "Male", "Female"}
 	val := PrivateDataFactory(data)
 	res, _ := val.applyPrivacy(1)
@@ -33,16 +31,11 @@ go get https://github.com/eriksonJAguiar/godiffpriv
 	} else {
 		fmt.Println(response)
 	}
-  
-
-  
-
-``
+```
 
 **For Symbolic data:**
 
-``
-  
+```
   	data := []float64{1.5, 2.3, 7.2, 9.1}
 	val := PrivateDataFactory(data)
 	res, _ := val.applyPrivacy(1)
@@ -56,7 +49,6 @@ go get https://github.com/eriksonJAguiar/godiffpriv
 	} else {
 		fmt.Println(response)
 	}
-  
-``
+```
 
 
