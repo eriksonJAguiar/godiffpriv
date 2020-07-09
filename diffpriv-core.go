@@ -29,7 +29,7 @@ type private interface {
 
 //Interface to represents a private values to implements the object factory
 type privatevalue interface {
-	applyPrivacy(float64) ([]byte, error)
+	ApplyPrivacy(float64) ([]byte, error)
 }
 
 // Object will be build to represents for symbolic datasets
@@ -160,10 +160,10 @@ func (q *qualitative) sensitivity() (float64, error) {
 	return max, nil
 }
 
-// applyPrivacy is a method to apply privacy on numeric data
+// ApplyPrivacy is a method to apply privacy on numeric data
 // Params: epsilon (float64): noise level
 // Returns: a byte array that would be converted to map[string]float64
-func (priv *privatequant) applyPrivacy(epsilon float64) ([]byte, error) {
+func (priv *privatequant) ApplyPrivacy(epsilon float64) ([]byte, error) {
 
 	q := new(quantitative)
 	q.data = priv.data
@@ -184,10 +184,10 @@ func (priv *privatequant) applyPrivacy(epsilon float64) ([]byte, error) {
 	return privBytes, nil
 }
 
-// applyPrivacy is a method to apply privacy on symbolic data
+// ApplyPrivacy is a method to apply privacy on symbolic data
 // Params: epsilon (float64): noise level
 // Returns: a byte array that would be converted to map[string]float64
-func (priv *privatequali) applyPrivacy(epsilon float64) ([]byte, error) {
+func (priv *privatequali) ApplyPrivacy(epsilon float64) ([]byte, error) {
 	q := new(qualitative)
 	q.data = priv.data
 
