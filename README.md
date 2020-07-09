@@ -13,6 +13,12 @@
 go get github.com/eriksonJAguiar/godiffpriv
 `
 
+#### Import:
+
+`
+import "github.com/eriksonJAguiar/godiffpriv"
+`
+
 #### Hello world:
 
 **For Numeric data:**
