@@ -27,8 +27,8 @@ type private interface {
 	sensitivity()
 }
 
-//Interface to represents a private values to implements the object factory
-type privatevalue interface {
+//Privatevalue is a interface to represents a private values to implements the object factory
+type Privatevalue interface {
 	ApplyPrivacy(float64) ([]byte, error)
 }
 
@@ -220,7 +220,7 @@ func (priv *privatequali) ApplyPrivacy(epsilon float64) ([]byte, error) {
 // PrivateDataFactory is a factory method to generate private objects
 // Params: dataset: a string to describes object type
 // Returns: object to numeric or symbolic data
-func PrivateDataFactory(dataset interface{}) privatevalue {
+func PrivateDataFactory(dataset interface{}) Privatevalue {
 	val := reflect.ValueOf(dataset)
 	t := val.Index(0)
 	switch t.Kind() {
