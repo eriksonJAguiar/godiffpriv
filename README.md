@@ -37,7 +37,8 @@ import "github.com/eriksonJAguiar/godiffpriv"
 	func main() {
 		data := []string{"Male", "Female", "Male", "Female"}
 		val := godiffpriv.PrivateDataFactory(data)
-		res, _ := val.applyPrivacy(1)
+		epsilon:= 1
+		res, _ := val.ApplyPrivacy(epsilon)
 
 		var response map[string]float64
 
@@ -65,7 +66,8 @@ import "github.com/eriksonJAguiar/godiffpriv"
 	func main() {
 		data := []float64{1.5, 2.3, 7.2, 9.1}
 		val := godiffpriv.PrivateDataFactory(data)
-		res, _ := val.applyPrivacy(1)
+		epsilon:= 1
+		res, _ := val.ApplyPrivacy(epsilon)
 
 		var response map[string]float64
 
