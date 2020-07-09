@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"math"
 	"reflect"
+	"strconv"
 	"time"
 
 	"github.com/montanaflynn/stats"
@@ -204,8 +205,11 @@ func (priv *privatequali) ApplyPrivacy(epsilon float64) ([]byte, error) {
 
 	privData := make(map[string]float64)
 
-	for key, val := range data {
+	i := 1
+	for _, val := range data {
+		key := strconv.Itoa(i)
 		privData[key] = float64(val) + noise[0]
+		i++
 	}
 
 	privBytes, err := json.Marshal(privData)
