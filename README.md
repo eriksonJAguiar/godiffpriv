@@ -11,13 +11,13 @@
 ### How to use?
 
 #### Install:
-`
+`shell
 go get github.com/eriksonJAguiar/godiffpriv
 `
 
 #### Import:
 
-`
+`go
 import "github.com/eriksonJAguiar/godiffpriv"
 `
 
@@ -25,7 +25,7 @@ import "github.com/eriksonJAguiar/godiffpriv"
 
 - **For symbolic data:**
 
-```	
+```go	
 	package main
 
 	import (
@@ -54,7 +54,7 @@ import "github.com/eriksonJAguiar/godiffpriv"
 
 - **For numeric data:**
 
-```
+```go
   	package main
 
 	import (
