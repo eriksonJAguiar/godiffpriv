@@ -11,13 +11,13 @@
 ### How to use?
 
 #### Install:
-`shell
+`
 go get github.com/eriksonJAguiar/godiffpriv
 `
 
 #### Import:
 
-`go
+`
 import "github.com/eriksonJAguiar/godiffpriv"
 `
 
