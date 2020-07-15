@@ -7,7 +7,7 @@ import (
 )
 
 func TestDiffPrivSymbolic(t *testing.T) {
-	data := []string{"Male", "Female", "Male", "Female"}
+	data := []string{"Unknown", "Male", "Female", "Male", "Female"}
 	val := PrivateDataFactory(data)
 	res, _ := val.ApplyPrivacy(1)
 
