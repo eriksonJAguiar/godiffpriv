@@ -149,7 +149,15 @@ func (q *qualitative) sensitivity() (float64, error) {
 		arrayQ1 := mapToSliceInt(q1)
 		arrayQ2 := mapToSliceInt(q2)
 
-		for j := 0; j < len(arrayQ1); j++ {
+		size := 0
+
+		if len(arrayQ1) > len(arrayQ2) {
+			size = len(arrayQ2)
+		} else if len(arrayQ2) > len(arrayQ1) {
+			size = len(arrayQ1)
+		}
+
+		for j := 0; j < size; j++ {
 			result := math.Abs(arrayQ1[j] - arrayQ2[j])
 			val = math.Max(val, result)
 		}
